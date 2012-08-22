@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "LCDeductionRule.h"
 
+/** The rule that deduces a query from an exactly matching fact.
+ */
+
 @interface LCIdentityRule : NSObject<LCDeductionRule>
 
 @end

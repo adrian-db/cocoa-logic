@@ -11,8 +11,6 @@
 
 @implementation LCGeneralisationRule
 
-// The rule of deduction that deduces a query from a fact if the query is existentially quantified, and the fact is an instance of it.
-// For example, a query 'who has an umbrella' is deduced from a fact 'George has an umbrella'.
 - (NSDictionary *)deductionOf:(LCTerm *)query fromFact:(LCTerm *)fact inProgram:(NSArray *)program
 {
     return [query instantiatingSubstitution:fact];

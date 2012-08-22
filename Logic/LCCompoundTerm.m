@@ -14,6 +14,8 @@
 @synthesize functor = _functor;
 @synthesize arguments = _arguments;
 
+#pragma mark Initialisation and Deallocation
+
 - (id)initWithName:(NSObject<NSCopying> *)name
 {
     return [self initWithName:name andArguments:nil];
@@ -86,6 +88,19 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_functor release];
+    _functor = nil;
+    
+    [_arguments release];
+    _arguments = nil;
+    
+    [super dealloc];
+}
+
+#pragma mark Applying and Creating Substitutions
+
 - (LCTerm *)applySubstitution:(NSDictionary *)substitution
 {
     // This may be inefficient - we create what will be an instance, if there are any variables to be bound. If not, we will get a copy of ourself.
@@ -96,33 +111,6 @@
     if ([instance isEqual:self]) return self;
     
     return instance;
-}
-
-- (BOOL)isGround
-{
-    for (LCTerm *argument in self.arguments) {
-        
-        if (![argument isGround]) return NO;
-        
-    }
-    
-    return YES;
-}
-
-- (NSString *)description
-{
-    NSString *description = [NSString stringWithFormat:@"%@(", self.functor.name];
-    
-    NSString *sep = @"";
-    
-    for (LCTerm *argument in self.arguments) {
-        
-        description = [NSString stringWithFormat:@"%@%@%@", description, sep, argument];
-        sep = @",";
-        
-    }
-    
-    return [NSString stringWithFormat:@"%@)", description];
 }
 
 - (NSDictionary *)instantiatingSubstitution:(LCTerm *)term
@@ -160,7 +148,7 @@
         // Otherwise, we have a substitution, but we need to do one final check. If the variables
         // substituted match with any we already gathered substitutions for - the substitutions
         // must match as well. If not, we have an inconsistency, and the term isn't an instance.
-        // I suppose, also that substituted terms match if one is an instance of the other - in
+        // I suppose, also, that substituted terms match if one is an instance of the other - in
         // this case, take the instance, as it will be the most specific binding of the variable.
         
         for (LCVariable *variable in argumentSubstitution.keyEnumerator) {
@@ -222,6 +210,24 @@
     return NO;
 }
 
+#pragma mark NSObject methods
+
+- (NSString *)description
+{
+    NSString *description = [NSString stringWithFormat:@"%@(", self.functor.name];
+    
+    NSString *sep = @"";
+    
+    for (LCTerm *argument in self.arguments) {
+        
+        description = [NSString stringWithFormat:@"%@%@%@", description, sep, argument];
+        sep = @",";
+        
+    }
+    
+    return [NSString stringWithFormat:@"%@)", description];
+}
+
 - (BOOL)isEqual:(id)object
 {
     if (self == object) return YES;
@@ -245,17 +251,6 @@
 - (NSUInteger)hash
 {
     return [self.functor hash] ^ [self.arguments hash];
-}
-
-- (void)dealloc
-{
-    [_functor release];
-    _functor = nil;
-    
-    [_arguments release];
-    _arguments = nil;
-    
-    [super dealloc];
 }
 
 @end

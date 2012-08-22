@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "LCDeductionRule.h"
 
+/** The rule that deduces a query from a universally quantified fact if the query is an instance of that fact.
+ 
+ For example, a fact stating that everyone likes Yoda is sufficient to deduce that Obi-Wan likes Yoda.
+ */
+
 @interface LCInstantiationRule : NSObject<LCDeductionRule>
 
 @end

@@ -14,10 +14,6 @@
 		3A845E8B15D94A0C00EDEC2A /* libLogic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A845E7215D94A0B00EDEC2A /* libLogic.a */; };
 		3A845E9115D94A0C00EDEC2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A845E8F15D94A0C00EDEC2A /* InfoPlist.strings */; };
 		3A845E9415D94A0C00EDEC2A /* LogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845E9315D94A0C00EDEC2A /* LogicTests.m */; };
-		3A845EA615D94AF000EDEC2A /* LCStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845EA515D94AF000EDEC2A /* LCStatement.m */; };
-		3A845EA915D94B0500EDEC2A /* LCFact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845EA815D94B0500EDEC2A /* LCFact.m */; };
-		3A845EB415D94DEA00EDEC2A /* LCQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845EB315D94DEA00EDEC2A /* LCQuery.m */; };
-		3A845EB715D94DFE00EDEC2A /* LCProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845EB615D94DFE00EDEC2A /* LCProgram.m */; };
 		3A845EBD15D967E400EDEC2A /* LCTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845EBC15D967E400EDEC2A /* LCTerm.m */; };
 		3A845EC015D967FF00EDEC2A /* LCCompoundTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845EBF15D967FF00EDEC2A /* LCCompoundTerm.m */; };
 		3A845EC315D9699C00EDEC2A /* LCVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845EC215D9699C00EDEC2A /* LCVariable.m */; };
@@ -65,14 +61,6 @@
 		3A845E9015D94A0C00EDEC2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A845E9215D94A0C00EDEC2A /* LogicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogicTests.h; sourceTree = "<group>"; };
 		3A845E9315D94A0C00EDEC2A /* LogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogicTests.m; sourceTree = "<group>"; };
-		3A845EA415D94AF000EDEC2A /* LCStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCStatement.h; sourceTree = "<group>"; };
-		3A845EA515D94AF000EDEC2A /* LCStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCStatement.m; sourceTree = "<group>"; };
-		3A845EA715D94B0500EDEC2A /* LCFact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCFact.h; sourceTree = "<group>"; };
-		3A845EA815D94B0500EDEC2A /* LCFact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCFact.m; sourceTree = "<group>"; };
-		3A845EB215D94DEA00EDEC2A /* LCQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCQuery.h; sourceTree = "<group>"; };
-		3A845EB315D94DEA00EDEC2A /* LCQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCQuery.m; sourceTree = "<group>"; };
-		3A845EB515D94DFE00EDEC2A /* LCProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCProgram.h; sourceTree = "<group>"; };
-		3A845EB615D94DFE00EDEC2A /* LCProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProgram.m; sourceTree = "<group>"; };
 		3A845EBB15D967E300EDEC2A /* LCTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTerm.h; sourceTree = "<group>"; };
 		3A845EBC15D967E400EDEC2A /* LCTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTerm.m; sourceTree = "<group>"; };
 		3A845EBE15D967FF00EDEC2A /* LCCompoundTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCompoundTerm.h; sourceTree = "<group>"; };
@@ -194,14 +182,6 @@
 		3A845E9D15D94A4100EDEC2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3A845EA415D94AF000EDEC2A /* LCStatement.h */,
-				3A845EA515D94AF000EDEC2A /* LCStatement.m */,
-				3A845EA715D94B0500EDEC2A /* LCFact.h */,
-				3A845EA815D94B0500EDEC2A /* LCFact.m */,
-				3A845EB215D94DEA00EDEC2A /* LCQuery.h */,
-				3A845EB315D94DEA00EDEC2A /* LCQuery.m */,
-				3A845EB515D94DFE00EDEC2A /* LCProgram.h */,
-				3A845EB615D94DFE00EDEC2A /* LCProgram.m */,
 				3A845EBB15D967E300EDEC2A /* LCTerm.h */,
 				3A845EBC15D967E400EDEC2A /* LCTerm.m */,
 				3A845EBE15D967FF00EDEC2A /* LCCompoundTerm.h */,
@@ -224,6 +204,14 @@
 				3A845ED615DC3E7600EDEC2A /* LCBasicEngineLoggingDelegate.h */,
 				3A845ED715DC3E7600EDEC2A /* LCBasicEngineLoggingDelegate.m */,
 				3A845ED915DE908B00EDEC2A /* LCDeductionRule.h */,
+				3A845EE615E5177C00EDEC2A /* Deduction Rules */,
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		3A845EE615E5177C00EDEC2A /* Deduction Rules */ = {
+			isa = PBXGroup;
+			children = (
 				3A845EDA15DE913C00EDEC2A /* LCIdentityRule.h */,
 				3A845EDB15DE913C00EDEC2A /* LCIdentityRule.m */,
 				3A845EDD15DE981600EDEC2A /* LCInstantiationRule.h */,
@@ -233,7 +221,7 @@
 				3A845EE315DEBD0A00EDEC2A /* LCCommonInstanceRule.h */,
 				3A845EE415DEBD0A00EDEC2A /* LCCommonInstanceRule.m */,
 			);
-			name = Engine;
+			name = "Deduction Rules";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,10 +322,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A845EA615D94AF000EDEC2A /* LCStatement.m in Sources */,
-				3A845EA915D94B0500EDEC2A /* LCFact.m in Sources */,
-				3A845EB415D94DEA00EDEC2A /* LCQuery.m in Sources */,
-				3A845EB715D94DFE00EDEC2A /* LCProgram.m in Sources */,
 				3A845EBD15D967E400EDEC2A /* LCTerm.m in Sources */,
 				3A845EC015D967FF00EDEC2A /* LCCompoundTerm.m in Sources */,
 				3A845EC315D9699C00EDEC2A /* LCVariable.m in Sources */,

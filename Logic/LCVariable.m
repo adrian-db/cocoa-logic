@@ -13,22 +13,7 @@
 
 @synthesize name = _name;
 
-- (id)copyWithZone:(NSZone *)zone
-{
-    return [self retain];
-}
-
-- (void)dealloc
-{
-    self.name = nil;
-    
-    [super dealloc];
-}
-
-- (NSString *)description
-{
-    return self.name;
-}
+#pragma mark Initialisation and Deallocation
 
 - (id)initWithName:(NSString *)name
 {
@@ -43,10 +28,14 @@
     return self;
 }
 
-- (BOOL)isGround
+- (void)dealloc
 {
-    return NO;
+    self.name = nil;
+    
+    [super dealloc];
 }
+
+#pragma mark Applying and Creating Substitutions
 
 - (LCTerm *)applySubstitution:(NSDictionary *)substitution
 {
@@ -79,6 +68,20 @@
     
     // Otherwise, just return a substitution of this variable for the term.
     return [[[NSDictionary alloc] initWithObjectsAndKeys:term, self, nil] autorelease];
+}
+
+#pragma mark NSObject methods
+
+- (NSString *)description
+{
+    return self.name;
+}
+
+#pragma mark NSCopying methods
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return [self retain];
 }
 
 @end

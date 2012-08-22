@@ -12,6 +12,28 @@
 
 @synthesize value = _value;
 
+#pragma mark Initialisation and Deallocation
+
+- (id)initWithValue:(NSObject<NSCopying> *)value
+{
+    self = [super init];
+    if (self != nil) {
+        
+        _value = [value copy];
+        
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [_value release]; _value = nil;
+    
+    [super dealloc];
+}
+
+#pragma mark NSObject methods
+
 - (NSString *)description
 {
     if ([self.value isKindOfClass:[NSString class]]) {
@@ -38,27 +60,9 @@
     return [self.value isEqual:constant.value];
 }
 
-- (id)initWithValue:(NSObject<NSCopying> *)value
-{
-    self = [super init];
-    if (self != nil) {
-        
-        _value = [value copy];
-        
-    }
-    return self;
-}
-
 - (NSUInteger)hash
 {
     return [self.value hash];
-}
-
-- (void)dealloc
-{
-    [_value release]; _value = nil;
-    
-    [super dealloc];
 }
 
 @end

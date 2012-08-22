@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "LCBasicEngine.h"
 
+/** A delegate that uses NSLog to log each substitution used to successfully deduce a query from a logic program.
+ */
+
 @interface LCBasicEngineLoggingDelegate : NSObject<LCBasicEngineDelegate>
 
 @end

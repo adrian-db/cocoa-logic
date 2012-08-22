@@ -16,6 +16,8 @@
 
 @synthesize delegate;
 
+#pragma mark Initialisation and Deallocation
+
 - (id)init
 {
     self = [super init];
@@ -40,6 +42,8 @@
     
     [super dealloc];
 }
+
+#pragma mark Deduction Engine Methods
 
 - (BOOL)deduce:(LCTerm *)query fromProgram:(NSArray *)program
 {
@@ -72,28 +76,6 @@
     }
     
     return isDeduced;
-}
-
-// Deduction Rules
-//
-// TODO: Possibly move these out into their own classes, once we have enough to generalise them.
-
-// Deduce an existential query if exactly that term exists.
-- (BOOL)deduceByIdentity:(LCTerm *)query fromTerm:(LCTerm *)term
-{
-    return [query isEqual:term];
-}
-
-// Deduce an existential query if an instance of it exists.
-- (NSDictionary *)substitutionDeducingByGeneralisation:(LCTerm *)query fromTerm:(LCTerm *)term
-{
-    return [query instantiatingSubstitution:term];
-}
-
-// Deduce an existential query if it is an instance of a universally quantified fact in the program.
-- (NSDictionary *)substitutionDeducingByInstantiation:(LCTerm *)query fromTerm:(LCTerm *)term
-{
-    return [term instantiatingSubstitution:query];
 }
 
 @end

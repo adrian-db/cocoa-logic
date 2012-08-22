@@ -13,6 +13,8 @@
 @synthesize name = _name;
 @synthesize arity = _arity;
 
+#pragma mark Initialisation and deallocation
+
 - (id)initWithName:(NSObject<NSCopying> *)name andArity:(NSUInteger)arity
 {
     self = [super init];
@@ -26,6 +28,16 @@
     
     return self;
 }
+
+- (void)dealloc
+{
+    [_name release]; _name = nil;
+    _arity = 0;
+    
+    [super dealloc];
+}
+
+#pragma mark NSObject methods
 
 - (BOOL)isEqual:(id)object
 {
@@ -50,14 +62,6 @@
 - (NSUInteger)hash
 {
     return [self.name hash];
-}
-
-- (void)dealloc
-{
-    [_name release]; _name = nil;
-    _arity = 0;
-    
-    [super dealloc];
 }
 
 @end

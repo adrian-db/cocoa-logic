@@ -10,6 +10,8 @@
 
 @implementation LCTerm
 
+#pragma mark Applying and Creating Substitutions
+
 - (LCTerm *)applySubstitution:(NSDictionary *)substitution
 {
     // Unless overriden by sub-classes to do something else, assume that
@@ -27,11 +29,6 @@
     if ([term isEqual:self]) return [[[NSDictionary alloc] init] autorelease];
     
     return nil;
-}
-
-- (BOOL)isGround
-{
-    return YES;
 }
 
 @end

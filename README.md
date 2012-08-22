@@ -5,7 +5,7 @@ Cocoa Logic is a simplified version of Prolog, written in Objective-C, allowing 
 
 The project has only just been started, and is not particularly useful.
 
-I'm developing this alongside reading [The Art of Prolog](http://www.amazon.co.uk/The-Art-PROLOG-Programming-Techniques/dp/0262691639/ref=sr_1_1?ie=UTF8&qid=1345636750&sr=8-1), and as important bits of the computational model are left to later chapters, I'm filling in with quick and dirty mechanisms as I go, or limiting the implementation until later.
+I'm developing this alongside reading [The Art of Prolog](http://www.amazon.co.uk/The-Art-PROLOG-Programming-Techniques/dp/0262691639 "The Art of Prolog"), and as important bits of the computational model are left to later chapters, I'm filling in with quick and dirty mechanisms as I go, or limiting the implementation until later.
 
 Quick start
 -----------
