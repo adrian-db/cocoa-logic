@@ -1,5 +1,5 @@
 //
-//  Logic.h
+//  LCStatement.h
 //  Logic
 //
 //  Created by Adrian Bigland on 13/08/2012.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Logic : NSObject
+@interface LCStatement : NSObject
 
 @end
