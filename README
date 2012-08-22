@@ -10,9 +10,9 @@ I'm developing this alongside reading [The Art of Prolog](http://www.amazon.co.u
 Quick start
 -----------
 
-Clone the repo, `git clone git://github.com/adrian-db/cocoa-logic.git`.
-Open the XCode project file.
-Run the unit tests from XCode `cmd-U`.
+* Clone the repo, `git clone git://github.com/adrian-db/cocoa-logic.git`.
+* Open the XCode project file.
+* Run the unit tests from XCode `cmd-U`.
 
 Future Work
 -----------
