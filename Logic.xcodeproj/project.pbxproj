@@ -13,7 +13,7 @@
 		3A845E8815D94A0B00EDEC2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A845E7515D94A0B00EDEC2A /* Foundation.framework */; };
 		3A845E8B15D94A0C00EDEC2A /* libLogic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A845E7215D94A0B00EDEC2A /* libLogic.a */; };
 		3A845E9115D94A0C00EDEC2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A845E8F15D94A0C00EDEC2A /* InfoPlist.strings */; };
-		3A845E9415D94A0C00EDEC2A /* LogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845E9315D94A0C00EDEC2A /* LogicTests.m */; };
+		3A845E9415D94A0C00EDEC2A /* LCBasicEngineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845E9315D94A0C00EDEC2A /* LCBasicEngineTests.m */; };
 		3A845EBD15D967E400EDEC2A /* LCTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845EBC15D967E400EDEC2A /* LCTerm.m */; };
 		3A845EC015D967FF00EDEC2A /* LCCompoundTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845EBF15D967FF00EDEC2A /* LCCompoundTerm.m */; };
 		3A845EC315D9699C00EDEC2A /* LCVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A845EC215D9699C00EDEC2A /* LCVariable.m */; };
@@ -59,8 +59,8 @@
 		3A845E8615D94A0B00EDEC2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		3A845E8E15D94A0C00EDEC2A /* LogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogicTests-Info.plist"; sourceTree = "<group>"; };
 		3A845E9015D94A0C00EDEC2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3A845E9215D94A0C00EDEC2A /* LogicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogicTests.h; sourceTree = "<group>"; };
-		3A845E9315D94A0C00EDEC2A /* LogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogicTests.m; sourceTree = "<group>"; };
+		3A845E9215D94A0C00EDEC2A /* LCBasicEngineTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCBasicEngineTests.h; sourceTree = "<group>"; };
+		3A845E9315D94A0C00EDEC2A /* LCBasicEngineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCBasicEngineTests.m; sourceTree = "<group>"; };
 		3A845EBB15D967E300EDEC2A /* LCTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTerm.h; sourceTree = "<group>"; };
 		3A845EBC15D967E400EDEC2A /* LCTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTerm.m; sourceTree = "<group>"; };
 		3A845EBE15D967FF00EDEC2A /* LCCompoundTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCompoundTerm.h; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 		3A845E8C15D94A0C00EDEC2A /* LogicTests */ = {
 			isa = PBXGroup;
 			children = (
-				3A845E9215D94A0C00EDEC2A /* LogicTests.h */,
-				3A845E9315D94A0C00EDEC2A /* LogicTests.m */,
+				3A845E9215D94A0C00EDEC2A /* LCBasicEngineTests.h */,
+				3A845E9315D94A0C00EDEC2A /* LCBasicEngineTests.m */,
 				3A845E8D15D94A0C00EDEC2A /* Supporting Files */,
 				3A845ED015D9840000EDEC2A /* LCCompoundTermTests.h */,
 				3A845ED115D9840000EDEC2A /* LCCompoundTermTests.m */,
@@ -340,7 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A845E9415D94A0C00EDEC2A /* LogicTests.m in Sources */,
+				3A845E9415D94A0C00EDEC2A /* LCBasicEngineTests.m in Sources */,
 				3A845ED215D9840000EDEC2A /* LCCompoundTermTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

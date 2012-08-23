@@ -10,6 +10,10 @@
 #import "LCConstant.h"
 #import "LCVariable.h"
 
+/**
+ Tests that ensure that the LCCompoundTerm methods behave as expected.
+ */
+
 @interface LCCompoundTermTests : SenTestCase
 {
     LCConstant *nameYoda;

@@ -11,7 +11,11 @@
 #import "LCConstant.h"
 #import "LCVariable.h"
 
-@interface LogicTests : SenTestCase
+/**
+Tests that ensure the deductions made by the basic logic engine are correct.
+*/
+
+@interface LCBasicEngineTests : SenTestCase
 {
     LCConstant *nameYoda;
     LCConstant *nameObiWan;
@@ -20,6 +24,9 @@
     LCVariable *varX;
     LCVariable *varY;
     LCVariable *varZ;
+    
+    /** master(QuiGon, ObiWan) */
+    LCTerm *termMasterQuiGonObiWan;
     
     NSObject<LCBasicEngineDelegate> *delegate;
 }
